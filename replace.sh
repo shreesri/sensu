@@ -1,6 +1,6 @@
 # *****************************************************************************************
 
-!/bin/bash
+#!/bin/bash
 # **************** Change Variables Here ************
 startdirectory="/etc/sensu/conf.d"
 searchterm="Hostname"
