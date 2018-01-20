@@ -13,7 +13,7 @@ echo "***************************************************"
 
 i=0;
 
-  for files in $(ls $startdirectory | awk '{print $9}'| grep -l -R $searchterm)
+  for files in $(ls -l $startdirectory | awk '{print $9}'| grep -l -R $searchterm)
     do
       sed -i -e 's/'$searchterm'/'$replaceterm'/g' $files
 
