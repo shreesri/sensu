@@ -9,6 +9,6 @@ then
         for file in $(grep -il $searstring test*)
         do
                 sed -e "s/$searstring/$repleacestring/ig" $file > /tmp/tempfile.tmp
-        mv /tmp/tempfile.tmp $file
+                mv /tmp/tempfile.tmp $file
         done
 fi
