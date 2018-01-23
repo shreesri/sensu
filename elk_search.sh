@@ -1,7 +1,7 @@
 #!/bin/bash
 
-x=$(curl -ks 'mygh-dca-qa14:9200/_cat/indices?v' | egrep -i 'health|fac' | awk '{print $7}' | sed -n 1p)
-y=$(curl -ks 'mygh-dca-qa14:9200/_cat/indices?v' | egrep -i 'health|fac' | awk '{print $7}' | sed -n 2p)
+x=$(cat elk.txt | awk '{print $7}' | sed -n 1p)
+y=$(cat elk.txt | awk '{print $7}' | sed -n 2p)
 
 if [[ $y > 0 ]]; then
         echo -e "$x value is $y";
